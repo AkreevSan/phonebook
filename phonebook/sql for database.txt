@@ -1,0 +1,27 @@
+CREATE TABLE authorizations
+(
+  login character varying(45) NOT NULL,
+  password character varying(60) NOT NULL,
+  role character varying(60) NOT NULL,
+  CONSTRAINT authorizations_pkey PRIMARY KEY (login)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE authorizations
+  OWNER TO postgres;
+  
+  
+  
+
+  
+  
+  
+  
+  
+  CREATE TABLE PERSON (
+ID SERIAL NOT NULL,
+NAME VARCHAR(255) NOT NULL,
+ADDRESS VARCHAR(255) NOT NULL,
+PHONE VARCHAR(255) NOT NULL,
+PRIMARY KEY (ID));
