@@ -15,53 +15,52 @@
         <script src="resources\bootstrap\js\jquery-3.1.1.min.js"></script>
         <script src="resources\bootstrap\js\bootstrap.js"></script>
         <style type="text/css">
-        #col1 {
-                 width:600px;
-                 height:300px;
-                 float:left;
+         #col1 {
+                  width:600px;
+                  height:300px;
+                  float:left;
 
-               }
-               #col2 {
-                 width:600px;
-                 height:300px;
-                 float:left;
-               }
-               #line {
-                 width:10px;
-                 height:300px;
-                 float:left;
-               }
+                }
+                #col2 {
+                  width:600px;
+                  height:300px;
+                  float:left;
+                }
+                #line {
+                  width:10px;
+                  height:300px;
+                  float:left;
+                }
 
 
-               #userdiv {
-               height: 150px;
-               width: 400px;
-               }
+                #userdiv {
+                height: 150px;
+                width: 400px;
+                }
 
-               #usertable{
-               width: 550px;
-               }
+                #usertable{
+                width: 550px;
+                }
 
-               #userbody{
-               display: block;
-                 height: 100px;
-                 width: 550px;
-               overflow: scroll;
-               }
+                #userbody{
+                display: block;
+                  height: 100px;
+                  width: 550px;
+                overflow: scroll;
+                }
 
-               .usertd {
-               width: 210px;
-               overflow: auto;
-               }
+                .usertd {
+                width: 210px;
+                overflow: auto;
+                }
 
-               #userhead{
-                 display: block;
-                 width: 550px;
-               }
-       #tddiv{
-         width: 80px;
-       }
-
+                #userhead{
+                  display: block;
+                  width: 551px;
+                }
+        #tddiv{
+          width: 165px;
+        }
         </style>
 
 </head>
@@ -193,10 +192,11 @@
           </thead>
       <tbody id="userbody">
       <c:forEach items="${authorizations}" var="auth">
+
       <tr>
         <td class="usertd"><div id="tddiv">${auth.login}</div></td>
-      <td class="usertd">${auth.role}</td>
-      <td class="usertd"><input type="radio" name="group1" value="${auth.login}"></td>
+        <td class="usertd"><div id="tddiv">${auth.role}</div></td>
+        <td class="usertd"><div id="tddiv"><input type="radio" name="group1" value="${auth.login}"></div></td>
       </tr>
 
 
