@@ -49,7 +49,7 @@
 <body>
 <a  href="welcome"><button class="btn btn-default">Back</button></a>
 <h2>Anonymous page</h2>
-<h1>Persons List</h1>
+<h1>Persons list</h1>
 <br/>
 <br/>
 

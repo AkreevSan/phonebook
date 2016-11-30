@@ -16,21 +16,51 @@
         <script src="resources\bootstrap\js\bootstrap.js"></script>
         <style type="text/css">
         #col1 {
-          width:600px;
-          height:300px;
-          float:left;
+                 width:600px;
+                 height:300px;
+                 float:left;
 
-        }
-        #col2 {
-          width:600px;
-          height:300px;
-          float:left;
-        }
-        #line {
-          width:10px;
-          height:300px;
-          float:left;
-        }
+               }
+               #col2 {
+                 width:600px;
+                 height:300px;
+                 float:left;
+               }
+               #line {
+                 width:10px;
+                 height:300px;
+                 float:left;
+               }
+
+
+               #userdiv {
+               height: 150px;
+               width: 400px;
+               }
+
+               #usertable{
+               width: 550px;
+               }
+
+               #userbody{
+               display: block;
+                 height: 100px;
+                 width: 550px;
+               overflow: scroll;
+               }
+
+               .usertd {
+               width: 210px;
+               overflow: auto;
+               }
+
+               #userhead{
+                 display: block;
+                 width: 550px;
+               }
+       #tddiv{
+         width: 80px;
+       }
 
         </style>
 
@@ -51,6 +81,7 @@
 
 <c:if test="${!empty listPerson}">
     <table class="tg">
+      <thead>
         <tr>
             <th width="80">id</th>
             <th width="120">name</th>
@@ -59,6 +90,8 @@
             <th width="60">Edit</th>
             <th width="60">Delete</th>
         </tr>
+      </thead>
+      <tbody>
         <c:forEach items="${listPerson}" var="person">
             <tr>
                 <td>${person.id}</td>
@@ -69,6 +102,7 @@
                 <td><a href="<c:url value='/remove/${person.id}'/>">Delete</a></td>
             </tr>
         </c:forEach>
+        </tbody>
     </table>
 </c:if>
 
@@ -147,21 +181,29 @@
 
     <form action = "delete" class="form-horizontal col-xs-offset-1">
 
-    <table class="table table-bordered">
+<div id="userdiv">
+
+    <table id = "usertable" class="table table-bordered">
+       <thead id="userhead">
         <tr>
-       <th>login</th>
-        <th>role</th>
-        <th>select</th>
+       <th class="usertd">login</th>
+        <th class="usertd">role</th>
+        <th class="usertd">select</th>
         </tr>
+          </thead>
+      <tbody id="userbody">
       <c:forEach items="${authorizations}" var="auth">
       <tr>
-      <td>${auth.login}</td>
-      <td>${auth.role}</td>
-      <td><input type="radio" name="group1" value="${auth.login}"></td>
+        <td class="usertd"><div id="tddiv">${auth.login}</div></td>
+      <td class="usertd">${auth.role}</td>
+      <td class="usertd"><input type="radio" name="group1" value="${auth.login}"></td>
       </tr>
-      </c:forEach>
-    </table>
 
+
+      </c:forEach>
+      </tbody>
+    </table>
+</div>
       <button type="submit" name="button" value="delete" class="btn btn-default">Delete</button>
        </form>
 </c:if>
@@ -169,5 +211,8 @@
 </td>
 </tr>
 </table>
+
 </body>
+
+
 </html>

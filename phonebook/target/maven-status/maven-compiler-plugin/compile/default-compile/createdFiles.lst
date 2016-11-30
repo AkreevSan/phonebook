@@ -10,7 +10,6 @@ ru\itpark\model\Authorization.class
 ru\itpark\controller\RegistrationController.class
 ru\itpark\model\Person.class
 ru\itpark\service\AuthorizationService.class
-ru\itpark\controller\A.class
 ru\itpark\dao\AuthorizationDaoImpl.class
 ru\itpark\dao\PersonDao.class
 ru\itpark\controller\PersonController.class
