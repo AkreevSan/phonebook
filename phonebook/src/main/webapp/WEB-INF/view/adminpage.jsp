@@ -58,7 +58,7 @@
                   display: block;
                   width: 551px;
                 }
-        #tddiv{
+        .tddiv{
           width: 165px;
         }
         </style>
@@ -194,9 +194,9 @@
       <c:forEach items="${authorizations}" var="auth">
 
       <tr>
-        <td class="usertd"><div id="tddiv">${auth.login}</div></td>
-        <td class="usertd"><div id="tddiv">${auth.role}</div></td>
-        <td class="usertd"><div id="tddiv"><input type="radio" name="group1" value="${auth.login}"></div></td>
+        <td class="usertd"><div class="tddiv">${auth.login}</div></td>
+        <td class="usertd"><div class="tddiv">${auth.role}</div></td>
+        <td class="usertd"><div class="tddiv"><input type="radio" name="group1" value="${auth.login}"></div></td>
       </tr>
 
 
